@@ -1,16 +1,20 @@
 function fibonacci(num) {
 // your code here
-	var n1 = 0; // declaration of variables n1, n2, i and temp.  
-	var num = 1;  
-	var temp;  
-	var i = 0;
-	
-	for (i = 0; i < num; i++)  {
-		temp = n1 + num; // store the sum of n1 and n2 in temp variable.  
-		n1 = num; // assign the n2 value into the n1 variable  
-		num = temp; // assign the new value of temp into n2 variable  
+	if (n == 1) {
+		return 0;
 	} 
-	return num; 
+	else if (n == 2 || n == 3) {
+	    return 1;
+   } 
+	else {
+	    let prev1 = 1, prev2 = 1;
+	    for (let i = 4; i <= n; i++) {
+			let next = prev1 + prev2;
+		    prev1 = prev2;
+		    prev2 = next;
+		}
+		return prev2;
+	}
 	
 }
 
